@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/2d129b1da3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <script src="book.js" defer></script>
+</head>
+<body>
+<section id="landing">
+    <nav class="nav_books">
+        <div class="nav_container">
+            <img class="logo" src="./assets/Library.svg" alt="">
+            <ul class="nav_links">
+                <li><a href="script.html" class="nav_link">Home</a></li>
+                <li><a href="#" class="nav_link">Contact</a></li>
+                <li><a href="#" class="nav_link nav_link-border">Books</a></li>
+            </ul>
+        <button class="btn_menu" onclick="openMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        </div>
+        <div class="menu_backdrop">
+            <button class="btn_menu btn_menu-close" onclick="closeMenu()">
+                <i class="fa-solid fa-x"></i>
+            </button>
+            <ul class="ul_menu-links">
+                <li class="menu_list"><a href="" class="menu_link" onclick="closeMenu()">Home</a></li>
+                <li class="menu_list"><a href="#featured_books" class="menu_link" onclick="closeMenu()">Books</a></li>
+                <li class="menu_list"><a href="" class="menu_link" onclick="closeMenu()">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+</section>
+<main id="books_main">
+    <section>
+        <div class="container">
+            <div class="all_books-row">
+                <div class="books_header">
+                    <h2>All <span class="purple">Books</span></h2>
+                    <select id="filter" onchange="filterBooks(event)">
+                        <option value="" disabled selected>Sort</option>
+                        <option value="LOW_TO_HIGH">Price, Low to High</option>
+                        <option value="HIGH_TO_LOW">Price, High to Low</option>
+                        <option value="RATING">Rating</option>
+                    </select>
+                </div>
+                <div class="books books_loading">
+                    <i class="fa-solid fa-spinner books_loading-spinner"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<footer>
+        <div class="container">
+            <div class="row">
+                <a href="">
+                <figure class="footer_logo">
+                    <img src="./assets/Library.svg" class="footer_img-logo" alt="">
+                </figure>
+                </a>
+                <div class="footer_list">
+                    <ul>
+                        <li><a href="#" class="footer_link">Home</a></li>
+                        <li><a href="#" class="footer_link">About</a></li>
+                        <li><a href="#" class="footer_link">Books</a></li>
+                        <li><a href="#" class="footer_link">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer_copyright">Copyright &copy; 2022 Library</div>
+            </div>
+        </div>
+</footer>
+</body>
+</html>
